@@ -19,9 +19,9 @@ jobs:
               pip install pylint
       - name: Analysing the code with pylint
         run: find . -name '*.py' -print -exec pylint {} \;
-      # - name: Lints each python file and fails if pylint score is less than 6.0
-      #   run: |
-      #         for file in $(find -name '*.py')
-      #         do
-      #           pylint "$file" --fail-under=6.0;
-      #         done
+      - name: Lints each python file and fails if pylint score is less than 6.0
+        run: |
+             for file in $(find -name '*.py')
+             do
+               pylint "$file" --fail-under=6.0;
+             done
