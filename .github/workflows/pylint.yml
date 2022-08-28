@@ -14,11 +14,11 @@ jobs:
         uses: actions/checkout@v2
       - name: Install dependencies
         run: |
-         python -m pip install --upgrade pip
-            pip install pylint
-            pip install umsgpack
-            pip install cryptography
-            pip install pylint-fail-under
+              python -m pip install --upgrade pip
+              pip install pylint
+              pip install umsgpack
+              pip install cryptography
+              pip install pylint-fail-under
       - name: Pylint version
         run: pylint --version
       - name: Analysing the code with pylint
